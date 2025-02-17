@@ -1,0 +1,71 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Entradas</title>
+    <link rel="stylesheet" href="StyloSecundario.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.747);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .option {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .option:hover {
+            transform: scale(1.05);
+        }
+        .general { background: #2b2b2b; color: #ffc107; }
+        .general-preferential { background: #000000; color: rgb(255, 251, 0); }
+        .platea { background: #ffc107; color: black; }
+        .platea-vip { background: #cccf06; color: rgb(0, 0, 0); }
+    </style>
+</head>
+<body>
+
+        <!--Inicio de Banner-->
+        <div class="banner">
+            <a href="./IndexMitre.html"><img src="./Mitre_escudo.png" alt="Logo"></a>
+            <h1>Club Atlético Mitre (Sde.) | Gracias por ser socio.</h1>
+        </div>
+        <!--Fin de Banner-->
+
+    <div class="container">
+        <h2>Seleccione su entrada</h2>
+        
+        <h4>Precios SOCIOS:
+            <h5>General: SOCIO AL DIA SIN CARGO</h5>
+            <h5>General preferencial: $4500</h5>
+            <h5>Platea: $6000</h5>
+            <h5>Platea VIP: $8000</h5>
+        </h4>
+        <a href="./GenerarSocio.html"><button class="option general">General</button></a>
+        <a href="./GeneralPreferencialSocio.html"><button class="option general-preferential">General Preferencial</button></a>
+        <a href="./PlateaSocio.html"><button class="option platea">Platea</button></a>
+        <a href="./PlateaVIPSocio.html"><button class="option platea-vip">Platea VIP</button></a>
+    </div>
+</body>
+</html>

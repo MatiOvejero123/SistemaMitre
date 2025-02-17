@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobante de Entrada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        .ticket {
+            padding: 15px;
+            border: 2px dashed #007bff;
+            margin: 10px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .print-button, .back-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .print-button { background-color: #28a745; color: white; }
+        .print-button:hover { background-color: #218838; transform: scale(1.05); }
+        .back-button { background-color: #6c757d; color: white; }
+        .back-button:hover { background-color: #5a6268; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="container CLUB ATL. MITRE(Sde.)">
+        <h2>Comprobante</h2>
+        <div class="ticket">
+            <p><strong>Evento:</strong> PRIMERA NACIONAL 2025</p>
+            <p><strong>Ubicación:</strong> <span id="seat"></span></p>
+            <p><strong>Lugar:</strong> <span id="data"></span></p>
+            <p><strong>Hora:</strong> <span id="time"></span></p>
+            <p><strong>DNI:</strong> <span id="dni"></span></p>
+        </div>
+        <a href="./IndexMitre.html"><button class="back-button">Volver Atrás</button></a>
+    </div>
+    
+    <script>
+        // Simulación de datos dinámicos
+        document.getElementById("seat").textContent = "ENTRADA GENERAL";
+        document.getElementById("data").textContent = "Estadio Doctores José y Antonio Castiglione.";
+        document.getElementById("time").textContent = "20:00 hs";
+        document.getElementById("dni").textContent = "12345678";
+    </script>
+</body>
+</html>

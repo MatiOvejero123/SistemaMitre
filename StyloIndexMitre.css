@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./FondoCam.jpg);
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de banner */
+.banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.banner img {
+    height: 60px;
+    position: absolute;
+    left: 30px;
+}
+.banner h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    font-size: medium;
+}
+
+/* Estilo para los divs contenedores */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 80px; /* Para evitar que el contenido quede detrás del banner */
+    flex-wrap: nowrap; /* Asegura que los divs se mantengan en una sola fila */
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo de los divs */
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejora la experiencia táctil en móviles */
+}
+
+/* Estilo para cada caja */
+.box {
+    width: 200px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.445);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.box:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+.box img {
+    width: 90px;
+    height: 90px;
+    border-radius: 5%;
+}
+
+.box p {
+    font-size: 18px;
+    color: white;
+}
+
+.box button {
+    padding: 5px 10px;
+    border: none;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.box button:hover {
+    background-color: rgb(239, 248, 112);
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: row; /* Asegura que los divs se alineen de manera horizontal */
+        gap: 10px;
+    }
+
+    .box {
+        width: 150px; /* Ajusta el tamaño de los divs en pantallas pequeñas */
+        height: 200px;
+    }
+}
+
+/* Personalización de las barras de desplazamiento */
+.container::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+    height: 10px; /* Alto de la barra de desplazamiento horizontal */
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color de la parte desplazable */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 2px solid rgba(0, 0, 0, 0.3); /* Borde alrededor de la barra */
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cambiar color al pasar el ratón */
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.3); /* Color de fondo de la pista */
+    border-radius: 5px;
+}

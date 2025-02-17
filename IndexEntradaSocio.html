@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entradas socios MITRE</title>
+    <link rel="stylesheet" href="StyloSecundario.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.699);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #cccf04;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ebf83a;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Inicio de Banner-->
+    <div class="banner">
+        <a href="./IndexMitre.html"><img src="./Mitre_escudo.png" alt="Logo"></a>
+        <h1>Club Atlético Mitre (Sde.) | Gracias por ser socio.</h1>
+    </div>
+    <!--Fin de Banner-->
+
+    <div class="container">
+        <center>
+        <h2>Socios  Mitre</h2>
+    </center>
+    <br>
+        <form id="dniForm">
+            <label for="dni">Ingresa tu dni:</label>
+            <br>
+            <input type="text" id="dni" name="dni" maxlength="8" placeholder="Ingrese su DNI" required>
+            <span class="error" id="dniError"></span>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+    <script>
+document.getElementById('dniForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let dniInput = document.getElementById('dni');
+    let dniError = document.getElementById('dniError');
+    let dniValue = dniInput.value.trim();
+    
+    let dniRegex = /^[0-9]{8}$/;
+    if (!dniRegex.test(dniValue)) {
+        dniError.textContent = 'El DNI debe contener exactamente 8 dígitos numéricos.';
+        return;
+    }
+    
+        dniError.textContent = '';
+        alert('DNI ingresado correctamente: ' + dniValue);
+        window.location.href = "./GenerarEntradaSocio.html"; // Redirige después de la validación
+    });
+    </script>
+
+</html>

@@ -1,0 +1,32 @@
+body {
+    background-image: url(./FondoCam.jpg);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de banner */
+.banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.banner img {
+    height: 60px;
+    position: absolute;
+    left: 30px;
+}
+.banner h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    font-size: medium;
+}
+/*Fin de banner*/

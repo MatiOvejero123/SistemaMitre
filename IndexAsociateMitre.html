@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUB ATL. MITRE || Hacete socio.</title>
+    <link rel="stylesheet" href="StyloIndexMitre.css">
+    <style>        
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.685);
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            text-align: center;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 5px 0;
+        }
+        input {
+            background-color: rgba(255, 255, 255, 0.699);
+            flex: 1;
+            padding: 8px;
+        }
+        .valid {
+            border: 2px solid green;
+        }
+        .invalid {
+            border: 2px solid red;
+        }
+        button {
+            padding: 10px;
+            background-color: #c5db00;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Inicio de Banner-->
+    <div class="banner">
+        <a href="./IndexMitre.html"><img src="./Mitre_escudo.png" alt="Logo"></a>
+        <h1>Club Atlético Mitre (Sde.)</h1>
+    </div>
+    <!--Fin de Banner-->
+
+    <div class="form-container">
+        <h2>Completá los campos y asociate</h2>
+        <form id="whatsappForm" style="font-size:16px;">
+            <br>
+            <label for="dni">Ingresar DNI (8 números):</label>
+            <div class="input-container">
+                <input type="text" id="dni" name="dni" maxlength="8" required>
+                <span id="dniStatus"></span>
+            </div>
+            <br>
+            <label for="nombre">Ingresar su nombre completo (Apellido seguido por su nombre):</label>
+            <div class="input-container">
+                <input type="text" id="nombre" name="nombre" required>
+                <span id="nombreStatus"></span>
+            </div>
+            <br>
+            <label for="domicilio">Ingresar Domicilio (Barrio, Calle, Número, Localidad, Provincia):</label>
+            <div class="input-container">
+                <input type="text" id="domicilio" name="domicilio" required>
+            </div>
+            <br>
+            <label for="telefono">Ingresar teléfono con caracteristica (Ejmplo: 3854123121):</label>
+            <div class="input-container">
+                <input type="text" id="telefono" name="telefono" maxlength="10" required>
+                <span id="telefonoStatus"></span>
+            </div>
+            <br><br>
+            <button type="submit">Enviar datos</button>
+        </form>
+        <br>
+        <a href="./IndexMitre.html"><button>Volver Atrás</button></a>
+    </div>
+
+    <script>
+        document.getElementById("dni").addEventListener("input", function() {
+            var dniInput = this.value;
+            var dniStatus = document.getElementById("dniStatus");
+            if (/^\d{8}$/.test(dniInput)) {
+                this.classList.add("valid");
+                this.classList.remove("invalid");
+                dniStatus.textContent = "✔";
+                dniStatus.style.color = "green";
+            } else {
+                this.classList.add("invalid");
+                this.classList.remove("valid");
+                dniStatus.textContent = "✖";
+                dniStatus.style.color = "red";
+            }
+        });
+
+        document.getElementById("nombre").addEventListener("input", function() {
+            var nombreInput = this.value;
+            var nombreStatus = document.getElementById("nombreStatus");
+            if (/^(\S+\s+){1,}\S+$/.test(nombreInput)) {
+                this.classList.add("valid");
+                this.classList.remove("invalid");
+                nombreStatus.textContent = "✔";
+                nombreStatus.style.color = "green";
+            } else {
+                this.classList.add("invalid");
+                this.classList.remove("valid");
+                nombreStatus.textContent = "✖";
+                nombreStatus.style.color = "red";
+            }
+        });
+
+        document.getElementById("telefono").addEventListener("input", function() {
+            var telefonoInput = this.value;
+            var telefonoStatus = document.getElementById("telefonoStatus");
+            if (/^\d{10}$/.test(telefonoInput)) {
+                this.classList.add("valid");
+                this.classList.remove("invalid");
+                telefonoStatus.textContent = "✔";
+                telefonoStatus.style.color = "green";
+            } else {
+                this.classList.add("invalid");
+                this.classList.remove("valid");
+                telefonoStatus.textContent = "✖";
+                telefonoStatus.style.color = "red";
+            }
+        });
+
+        document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var dni = document.getElementById("dni").value;
+            var nombre = document.getElementById("nombre").value;
+            var domicilio = document.getElementById("domicilio").value;
+            var telefono = document.getElementById("telefono").value;
+            var numero = "5493854183313";
+            var mensaje = encodeURIComponent("Hola, mi nombre es: " + nombre + ", mi DNI es: " + dni + ", mi teléfono es: " + telefono + " y mi domicilio es: " + domicilio);
+            var url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + mensaje;
+            window.open(url, "_blank");
+        });
+    </script>
+</body>
+</html>
+
