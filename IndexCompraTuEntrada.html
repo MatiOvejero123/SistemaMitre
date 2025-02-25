@@ -1,102 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu entrada || MITRE</title>
-    <link rel="stylesheet" href="styloProyectoMitre.css">
-
-    <style>
-        .custom-button {
-    display: inline-block;
-    background-color: #ffcc00;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-.custom-button:hover {
-    background-color: #e6b800;
-}
-</style>
+    <title>CLUB ATL. MITRE</title>
+    <link rel="stylesheet" href="StyloIndexMitre.css">
 </head>
+
 <body>
-        <!-- header -->
-        <!--Inicio de Banner-->
-        <div class="banner">
-            <a href="./IndexMitre.html"><img src="./Mitre_escudo.png" alt="Logo"></a>
-            <h1>C.A. Mitre || Comprá tu entrada.</h1>
-        </div>
-        <!--Fin de Banner-->
-        <br>
-    <!-- slider -->
-
-    <div class="slider">
-        <!-- list Items -->
-        <div class="list">
-            <!--Primer ITEM-->
-            <div class="item active">
-                <img src="#">
-                <div class="content">
-                    <p>Realizá la compra desde tu casa.</p>
-                    <h3>Comprá tu entrada para socio.</h3>
-                    <p>
-                        Reservá tu entrada de manera digital.
-                        <a href="./IndexMitre.html" class="custom-button">Volver a la pagina principal.</a>
-                        <br>
-                        <h5>Seleccioná tu opción</h5>
-                    </p>
-                </div>
-            </div>
-
-            <!--Segundo ITEM-->
-            <div class="item">
-                <img src="#">
-                <div class="content">
-                    <p>Comprá tu entrada para NO socio.</p>
-                    <h3>Localidades para no socios.</h3>
-                    <p>
-                        Reservá tu entrada de manera digital.
-                        <a href="./IndexMitre.html" class="custom-button">Volver a la pagina principal.</a>
-                        <h5>Seleccioná tu opción</h5>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!--Fin de ITEMS-->
-
-        <!--Cards inferiores-->
-        <!--Primera carta-->
-        <div class="thumbnail">
-            <div class="item active">
-                <a href="./IndexEntradaSocio.html"><img src="./Foto08.jpeg"></a>
-                <div class="content">
-                    <p style="color:rgba(255, 255, 255, 0.863);">Entrada socio.</p>
-                </div>
-            </div>
-            <!--Segunda carta-->
-            <div class="item">
-                <a href="./IndexEntradaNOSOCIO.html"><img src="./Foto09.jpeg"></a>
-                <div class="content">
-                    <p style="color:rgba(255, 255, 255, 0.863);">Entrada NO socio.</p>
-                </div>
-            </div>
-        </div>
-        <!--Fin de cards inferiores-->
+    <!--Inicio de Banner-->
+    <div class="banner">
+        <a href="./IndexMitre.html"><img src="./Mitre_escudo.png" alt="Logo"></a>
+        <h1>Club Atlético Mitre (Sde.)</h1>
     </div>
+    <!--Fin de Banner-->
 
-    <center>
-                <!-- button arrows -->
-                <div class="arrows">
-                    <button id="prev"><</button>
-                    <button id="next">></button>
-                </div>
-                <!-- thumbnail -->
-    </center>
+    <div class="container">
+        <div class="box">
+            <img src="https://pbs.twimg.com/media/GjYQoxnW0AAqdHW?format=jpg&name=medium" alt="Imagen">
+            <p>Saca tu entrada para socio.</p>
+            <a href="./IndexEntradaSocio.html"><button>Ingresar</button></a>
+        </div>
 
-    <script src="SCindexMitre.js"></script>
-
+        <div class="box">
+            <img src="https://pbs.twimg.com/media/GkqRDe8XcAACSde?format=jpg&name=large" alt="Imagen">
+            <p>Saca tu entrada para NO socio.</p>
+            <a href="./IndexEntradaNOSOCIO.html"><button>Ingresar</button></a>
+        </div>
+    </div>
 </body>
 </html>

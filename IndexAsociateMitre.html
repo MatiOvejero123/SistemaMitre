@@ -35,7 +35,7 @@
         }
         button {
             padding: 10px;
-            background-color: #c5db00;
+            background-color: rgb(248, 170, 0);
             color: white;
             border: none;
             cursor: pointer;
@@ -80,7 +80,7 @@
                 <span id="telefonoStatus"></span>
             </div>
             <br><br>
-            <button type="submit">Enviar datos</button>
+            <button type="submit;">Enviar datos</button>
         </form>
         <br>
         <a href="./IndexMitre.html"><button>Volver Atrás</button></a>
@@ -142,7 +142,7 @@
             var domicilio = document.getElementById("domicilio").value;
             var telefono = document.getElementById("telefono").value;
             var numero = "5493854183313";
-            var mensaje = encodeURIComponent("Hola, mi nombre es: " + nombre + ", mi DNI es: " + dni + ", mi teléfono es: " + telefono + " y mi domicilio es: " + domicilio);
+            var mensaje = encodeURIComponent("Hola, quiero ser socio: " + nombre + ", mi DNI es: " + dni + ", mi teléfono es: " + telefono + " y mi domicilio es: " + domicilio);
             var url = "https://api.whatsapp.com/send?phone=" + numero + "&text=" + mensaje;
             window.open(url, "_blank");
         });

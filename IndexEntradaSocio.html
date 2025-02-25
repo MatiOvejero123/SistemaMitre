@@ -21,23 +21,23 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         input {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
             border-radius: 5px;
         }
         button {
             width: 100%;
             padding: 10px;
-            background-color: #cccf04;
-            color: white;
+            background-color: #ffbe0b;
+            color: rgb(0, 0, 0);
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
         button:hover {
-            background-color: #ebf83a;
+            background-color: #f8d53a;
         }
         .error {
             color: red;
@@ -50,7 +50,7 @@
     <!--Inicio de Banner-->
     <div class="banner">
         <a href="./IndexMitre.html"><img src="./Mitre_escudo.png" alt="Logo"></a>
-        <h1>Club Atlético Mitre (Sde.) | Gracias por ser socio.</h1>
+        <h1 style="font-size: 11px;">Club Atlético Mitre (Sde.) | Gracias por ser socio.</h1>
     </div>
     <!--Fin de Banner-->
 
@@ -68,22 +68,22 @@
         </form>
     </div>
     <script>
-        document.getElementById('dniForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        let dniInput = document.getElementById('dni');
-        let dniError = document.getElementById('dniError');
-        let dniValue = dniInput.value.trim();
-        
-        let dniRegex = /^[0-9]{8}$/;
-        if (!dniRegex.test(dniValue)) {
-            dniError.textContent = 'El DNI debe contener exactamente 8 dígitos numéricos.';
-            return;
-        }
-        
-            dniError.textContent = '';
-            alert('DNI ingresado correctamente: ' + dniValue);
-            window.location.href = "./GenerarEntradaSocio.html"; // Redirige después de la validación
-        });
+document.getElementById('dniForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let dniInput = document.getElementById('dni');
+    let dniError = document.getElementById('dniError');
+    let dniValue = dniInput.value.trim();
+    
+    let dniRegex = /^[0-9]{8}$/;
+    if (!dniRegex.test(dniValue)) {
+        dniError.textContent = 'El DNI debe contener exactamente 8 dígitos numéricos.';
+        return;
+    }
+    
+        dniError.textContent = '';
+        alert('DNI ingresado correctamente: ' + dniValue);
+        window.location.href = "./GenerarEntradaSocio.html"; // Redirige después de la validación
+    });
     </script>
 
 </html>
