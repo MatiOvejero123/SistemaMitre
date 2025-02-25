@@ -68,22 +68,22 @@
         </form>
     </div>
     <script>
-document.getElementById('dniForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    let dniInput = document.getElementById('dni');
-    let dniError = document.getElementById('dniError');
-    let dniValue = dniInput.value.trim();
-    
-    let dniRegex = /^[0-9]{8}$/;
-    if (!dniRegex.test(dniValue)) {
-        dniError.textContent = 'El DNI debe contener exactamente 8 dígitos numéricos.';
-        return;
-    }
-    
-        dniError.textContent = '';
-        alert('DNI ingresado correctamente: ' + dniValue);
-        window.location.href = "./GenerarEntradaSocio.html"; // Redirige después de la validación
-    });
+        document.getElementById('dniForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let dniInput = document.getElementById('dni');
+        let dniError = document.getElementById('dniError');
+        let dniValue = dniInput.value.trim();
+        
+        let dniRegex = /^[0-9]{8}$/;
+        if (!dniRegex.test(dniValue)) {
+            dniError.textContent = 'El DNI debe contener exactamente 8 dígitos numéricos.';
+            return;
+        }
+        
+            dniError.textContent = '';
+            alert('DNI ingresado correctamente: ' + dniValue);
+            window.location.href = "./GenerarEntradaSocio.html"; // Redirige después de la validación
+        });
     </script>
 
 </html>

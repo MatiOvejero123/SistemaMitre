@@ -1,40 +1,136 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLUB ATL. MITRE</title>
-    <link rel="stylesheet" href="StyloIndexMitre.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="styloProyectoMitre.css">
 </head>
-
 <body>
-    <!--Inicio de Banner-->
-    <div class="banner">
-        <a href="./IndexMitre.html"><img src="./Mitre_escudo.png" alt="Logo"></a>
-        <h1>Club Atlético Mitre (Sde.)</h1>
+        <!-- header -->
+        <!--Inicio de Banner-->
+        <div class="banner">
+            <a href="./IndexMitre.html"><img src="./Mitre_escudo.png" alt="Logo"></a>
+            <h1>Club Atlético Mitre (Sde.)</h1>
+        </div>
+        <!--Fin de Banner-->
+
+    <!-- slider -->
+
+    <div class="slider">
+        <!-- list Items -->
+        <div class="list">
+            <!--Primer ITEM-->
+            <div class="item active">
+                <img src="#">
+                <div class="content">
+                    <p>Realizá la compra desde tu casa.</p>
+                    <h3>Comprá tu entrada.</h3>
+                    <p>
+                        Reservá tu entrada de manera digital.
+                    </p>
+                </div>
+            </div>
+
+            <!--Segundo ITEM-->
+            <div class="item">
+                <img src="#">
+                <div class="content">
+                    <p>Asociate</p>
+                    <h3>Hacete socio de Mitre.</h3>
+                    <p>
+                        Ayuda al club y aprovecha los beneficios que te ofrecemos.
+                    </p>
+                </div>
+            </div>
+
+            <!--Tercer ITEM-->
+            <div class="item">
+                <img src="#">
+                <div class="content">
+                    <p>Mi cuenta.</p>
+                    <h3>¿Estoy al día?.</h3>
+                    <p>
+                        Visualiza tu estado de cuenta.
+                    </p>
+                </div>
+            </div>
+
+            <!--Cuarto ITEM.-->
+            <div class="item">
+                <img src="image/img4.jpg">
+                <div class="content">
+                    <p>beneficios.</p>
+                    <h3>Beneficios de socio.</h3>
+                    <p>
+                        Mirá todo lo que tenemos para ofrecer a nuestros socios.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/img5.jpg">
+                <div class="content">
+                    <p>Consegui la indimentaria oficial del club.</p>
+                    <h3>Indumentaria.</h3>
+                    <p>
+                        Compra la indumentaria del club.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Fin de ITEMS-->
+
+        <!--Cards inferiores-->
+        <!--Primera carta-->
+        <div class="thumbnail">
+            <div class="item active">
+                <a href="./IndexCompraTuEntrada.html"><img src="./Foto02.jpg"></a>
+                <div class="content">
+                    <p style="color:rgba(255, 255, 255, 0.863);">Comprá tu entrada.</p>
+                </div>
+            </div>
+            <!--Segunda carta-->
+            <div class="item">
+                <a href="./IndexAsociateMitre.html"><img src="./Foto03.jpg"></a>
+                <div class="content">
+                    <p style="color:rgba(255, 255, 255, 0.863);">Hacete socio.</p>
+                </div>
+            </div>
+            <!--Tercer carta-->
+            <div class="item">
+                <a href=""><img src="./FondoCam.jpg"></a>
+                <div class="content">
+                    <p style="color:rgba(255, 255, 255, 0.863);">Ver mi cuenta.</p>
+                </div>
+            </div>
+            <!--Cuarta carta-->
+            <div class="item">
+                <a href="./BeneficiosSocios.html"><img src="./Foto05.jpg"></a>
+                <div class="content">
+                    <p style="color:rgba(255, 255, 255, 0.863);">Beneficios.</p>
+                </div>
+            </div>
+
+            <!--Cuarta carta-->
+            <div class="item">
+                <a href="https://adhoconline.com.ar/tienda/ols/categories/cam"><img src="./Foto06.jpg"></a>
+                <div class="content">
+                    <p style="color:rgba(255, 255, 255, 0.863);">Comprá tu indumentaria.</p>
+                </div>
+            </div>
+        </div>
+        <!--Fin de cards inferiores-->
     </div>
-    <!--Fin de Banner-->
 
-    <div class="container">
-        <div class="box">
-            <img src="./Foto03.jpg" alt="Imagen">
-            <h4 style="color: white;">Comprá tu entrada.</h4>
-            <a href="IndexCompraTuEntrada.html"><button>Ingresar</button></a>
-        </div>
+    <center>
+                <!-- button arrows -->
+                <div class="arrows">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
+                <!-- thumbnail -->
+    </center>
 
-        <div class="box">
-            <img src="./foto02.jpg" alt="Imagen">
-            <h4 style="color: white;">Hacete socio.</h4>
-            <a href="./IndexAsociateMitre.html"><button>Ingresar</button></a>
-        </div>
-
-        <div class="box">
-            <img src="./Foto04.jpg" alt="Imagen">
-            <H4 style="color: white;">¿Estoy al día? ver.</H4>
-            <a href="./IndexVerMiCuenta.html"><button>Ingresar</button></a>
-        </div>
-
-        
-    </div>
+    <script src="SCindexMitre.js"></script>
 </body>
 </html>
